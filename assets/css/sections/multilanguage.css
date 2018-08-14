@@ -1,0 +1,54 @@
+#_multilanguage {
+    background-color: #f6f6f6;
+}
+
+#_multilanguage .h5 {
+    font-weight: bold;
+}
+
+#_multilanguage p {
+    font-size: 1.125rem;
+    color: #434343;
+}
+
+#_multilanguage header>p {
+    margin-bottom: 0;
+}
+
+.multilanguage-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.multilanguage-block img {
+    margin-right: 20px;
+}
+
+.eternity-block-img {
+    display: flex;
+}
+
+.eternity-block-img__ru,
+.eternity-block-img__en,
+.eternity-block-img__ua {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    border: 1px solid #F0EBEF;
+    padding: 5px 20px;
+    overflow: hidden;
+    width: 150px;
+    height: 46px;
+    text-align: center;
+}
+
+.multilanguage-img {
+    margin-top: 27px;
+}
+
+@media (min-width: 768px) {
+    #_multilanguage h2 {
+        margin-bottom: 100px;
+    }
+}

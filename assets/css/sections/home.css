@@ -1,0 +1,43 @@
+body:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#_home {
+    min-height: 100vh;
+}
+#_home,
+#_statistics {
+    background-color: transparent;
+}
+@media (min-width: 1199px) {
+    .fp-viewing-home #header {
+        filter: brightness(0) invert(1);
+    }
+}
+@media (max-width: 767px) {
+    #_home img {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+        background-image: none;
+    }
+    #_home {
+        min-height: initial;
+        padding-top: 125px;
+        padding-bottom: 125px;
+        background-image: url(../../images/background.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}

@@ -1,0 +1,25 @@
+#_api {
+    background-color: #f6f6f6;
+}
+
+#_api .h5 {
+    font-weight: bold;
+}
+
+#_api p {
+    font-size: 1.125rem;
+    color: #434343;
+}
+
+#_api header>p {
+    margin-bottom: 0;
+}
+#_api header {
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    #_api h2 {
+        margin-bottom: 100px;
+    }
+}

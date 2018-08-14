@@ -1,0 +1,29 @@
+.logo-link {
+    position: relative;
+}
+.logo-delimiter {
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    border-right: 1px solid #000000;
+    margin: 0 24px;
+}
+
+#header {
+    transition: all 1s ease;
+}
+
+@media (max-width: 1199px) {
+    #header {
+        background-color: #fff;
+        box-shadow: rgba(0,0,0,.1) 0 5px 5px;
+    }
+}
+@media (max-width: 374px) {
+    #header>.navbar {
+        padding: 2px 1rem;
+    }
+    .logo-delimiter {
+        margin: 0 12px;
+    }
+}

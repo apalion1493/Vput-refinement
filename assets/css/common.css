@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#main>div,
+section {
+    background-size: cover;
+    background-position: center;
+}
+
+section.section,
+section.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, .h1 {
+    font-size: 3rem;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h3, .h3 {
+    margin-bottom: 1.25rem;
+}
+
+ul.row {
+    list-style: none;
+    padding-left: 0;
+}
+
+[data-icon] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+[data-icon="apple"] { background-image: url(../images/icons/apple.svg); }
+[data-icon="windows"] { background-image: url(../images/icons/windows.svg); }
+[data-icon="android"] { background-image: url(../images/icons/android.svg); }
+
+@media (min-width: 1400px) {
+    h2 {
+        font-size: 2.25rem;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .section {
+        height: initial!important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    h1, .h1 {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    h2, .h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+}
+@media(max-width: 374px) {
+    h1, .h1 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    h2, .h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    h3, .h3 {
+        font-size: 1.2rem;
+    }
+}

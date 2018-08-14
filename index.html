@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Webdelo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="node_modules/fullpage.js/dist/jquery.fullpage.min.css">-->
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <!-- Sections -->
+    <link rel="stylesheet" href="assets/css/sections/home.css">
+    <link rel="stylesheet" href="assets/css/sections/statistics.css">
+    <link rel="stylesheet" href="assets/css/sections/competitors.css">
+    <link rel="stylesheet" href="assets/css/sections/notifications.css">
+    <link rel="stylesheet" href="assets/css/sections/affiliate-program.css">
+    <link rel="stylesheet" href="assets/css/sections/payments.css">
+    <link rel="stylesheet" href="assets/css/sections/multilanguage.css">
+    <link rel="stylesheet" href="assets/css/sections/api.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+
+<header id="header" class="fixed-top">
+    <nav class="navbar container navbar-light">
+        <a class="navbar-brand logo-link" href="#">
+            <img src="assets/images/logo_WEBDELO.svg" alt="WEBDELO" id="logo_webdelo">
+            <span class="logo-delimiter"></span>
+            <img src="assets/images/logo_VPUT.svg" alt="VPUT" id="logo_vput">
+        </a>
+    </nav>
+</header>
+<main id="main" class="js-fullpage">
+    <section id="_home" class="section">
+        <div class="container text-center text-white">
+            <img src="assets/images/sections/home/logo_VPUT.svg" alt="VPUT" class="mb-4">
+            <h1 class="text-uppercase">Cервис автоматизи<wbr>рованной аренды <br>апартаментов в Болгарии</h1>
+        </div>
+    </section>
+    <section id="_statistics" class="section">
+        <div class="container text-white">
+            <h2>Лучше всего о нас говорят цифры</h2>
+            <ul id="list-of-stats" class="row justify-content-between">
+                <li class="col-6 col-md-3">
+                    <figure class="figure" data-dataset="vendors">
+                        <picture>
+                            <img src="assets/images/sections/statistics/icon_vendors.svg" alt="Вендоры">
+                        </picture>
+                        <figcaption class="figure-caption">
+                            <div class="stat-count">1661</div>
+                            <div class="stat-name">вендоров</div>
+                            <span class="stat-point" style="background-color: #BBFF81;"></span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="col-6 col-md-3">
+                    <figure class="figure" data-dataset="apartaments">
+                        <picture>
+                            <img src="assets/images/sections/statistics/icon_apartments.svg" alt="Апартаменты">
+                        </picture>
+                        <figcaption class="figure-caption">
+                            <div class="stat-count">1875</div>
+                            <div class="stat-name">апартаментов</div>
+                            <span class="stat-point" style="background-color: #58CCEC;"></span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="col-6 col-md-3">
+                    <figure class="figure" data-dataset="clients">
+                        <picture>
+                            <img src="assets/images/sections/statistics/icon_clients.svg" alt="Клиенты">
+                        </picture>
+                        <figcaption class="figure-caption">
+                            <div class="stat-count">5250</div>
+                            <div class="stat-name">клиентов</div>
+                            <span class="stat-point" style="background-color: #D66EBB;"></span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="col-6 col-md-3">
+                    <figure class="figure" data-dataset="bookings">
+                        <picture>
+                            <img src="assets/images/sections/statistics/icon_bookings.svg" alt="Бронирования">
+                        </picture>
+                        <figcaption class="figure-caption">
+                            <div class="stat-count">5812</div>
+                            <div class="stat-name">бронирований</div>
+                            <span class="stat-point" style="background-color: #E67963;"></span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <div id="statistics__chart-wrapper">
+                <canvas id="statistics__project-development-chart"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="_competitors" class="section">
+        <div class="container">
+            <h2>Соперничаем с серьезными компаниями</h2>
+            <ul class="nav nav-tabs" id="_competitors__tabs">
+                <li>
+                    <a class="nav-link" data-toggle="tab" href="#competitors__diagram__content" role="tab" aria-controls="competitors__diagram__content" aria-selected="true">
+                        <figure class="figure">
+                            <img src="assets/images/sections/competitors/investments.svg" alt="Инвестиции" class="figure-img">
+                            <figcaption class="figure-caption">Инвестиции <br>в проект</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">
+                        <figure class="figure">
+                            <img src="assets/images/sections/competitors/workers.svg" alt="Сотрудники" class="figure-img">
+                            <figcaption class="figure-caption">Кол-во <br>сотрудников</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">
+                        <figure class="figure">
+                            <img src="assets/images/sections/competitors/apartaments.svg" alt="Апартаменты" class="figure-img">
+                            <figcaption class="figure-caption">Кол-во <br>апартаментов</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane active" id="competitors__diagram__content" role="tabpanel" aria-labelledby="home-tab">
+                    <ul class="competitors__diagram">
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_booking">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_Booking.com.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>*€300 млн</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_airbnb">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_airbnb.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>*€200 млн</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_vput">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_VPUT.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>€0.2 млн</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <ul class="competitors__diagram">
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_booking">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_Booking.com.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>15,000+</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_airbnb">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_airbnb.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>200+</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_vput">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_VPUT.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>10+</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <ul class="competitors__diagram">
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_booking">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_Booking.com.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>*200 млн.</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_airbnb">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_airbnb.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>*10 млн.</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="competitors__diagram__item competitors__diagram_vput">
+                                <picture class="brand-logo">
+                                    <img src="assets/images/sections/competitors/logo_VPUT.svg" alt="">
+                                </picture>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <figcaption>1,800+</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="_notifications" class="section">
+        <div id="devices">
+            <figure id="MacBook">
+                <div id="MacBook__screen">
+                    <div id="MacBook__screen__index-page">
+                        <img id="MacBook__notification" src="assets/images/sections/notifications/MacBook__notification.svg" alt="">
+                    </div>
+                    <div id="MacBook__screen__email-page"></div>
+                </div>
+            </figure>
+            <figure id="iPhone-X">
+                <div id="iPhone-X__screen">
+                    <img id="iPhone-X__notification" src="assets/images/sections/notifications/iPhone_X__notification.svg">
+                    <div id="iPhone-X__app_Safari"></div>
+                    <div id="iPhone-X__app_iMessage">
+                        <div class="message-box">
+                            <img src="assets/images/sections/notifications/iPhone_X_app_iMssage__message-2.svg" alt="">
+                            <img src="assets/images/sections/notifications/iPhone_X_app_iMssage__message-1.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+
+        <div class="container">
+            <h2>Notification Center</h2>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <ul id="list-of-notification-types" class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#notifications_push" role="tab"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#notifications_sms" role="tab"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#notifications_email" role="tab"></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="notifications_push" role="tabpanel">
+                            <h3>Push notification</h3>
+                            <ul class="list-style-arrow">
+                                <li>Позволяет получать уведомления на всех типах устройств
+                                    <i data-icon="apple"></i>
+                                    <i data-icon="windows"></i>
+                                    <i data-icon="android"></i>
+                                </li>
+                                <li>Позволяет снизить время реакции на события в системе</li>
+                                <li>Нет необходимости разрабатывать отдельное веб-приложение</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="notifications_sms" role="tabpanel">
+                            <h3>SMS notification</h3>
+                            <ul class="list-style-arrow">
+                                <li>Мультиязычная отправка СМС оповещений в зависимости от языка аккаунта.</li>
+                                <li>Возможностью подключать различные движка для отправки СМС.</li>
+                                <li>Возможность отпарвлять СМС используя разные сервисы для разных ЗОН получателей. Экономит деньги.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="notifications_email" role="tabpanel">
+                            <h3>E-mail notification</h3>
+                            <ul class="list-style-arrow">
+                                <li>Мультиязычные шаблоны для рассылки по языку аккаунта</li>
+                                <li>HTML вёрстка шаблонов</li>
+                                <li>Адаптированные шаблоны под устройства</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="_affiliate-program" class="section">
+        <div class="container text-center">
+            <h2>Партнёрская программа</h2>
+            <figure class="figure diagram">
+                <img src="assets/images/sections/affiliate-program/diagram.svg">
+            </figure>
+            <div id="step" class="text-center">
+                <figure id="step__counter" class="d-md-flex">
+                    <figcaption>
+                        <div class="step__counter__number">1</div>
+                        <div class="step__counter__description">Отличный способ контролирования менеджерами статуса различных событий на сайте.</div>
+                    </figcaption>
+                    <div class="btn-container">
+                        <button class="btn btn-outline-info btn-lg">Далее</button>
+                    </div>
+                </figure>
+                <figure id="step__progress">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div id="step__progress__title">Пройденно шагов</div>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section id="_payments" class="section">
+        <div class="container">
+            <div class="row">
+                <section class="col-xl-6 col-lg-8">
+                    <h2>Работа с платёжными системами</h2>
+                    <ul class="list-of-payment-methods">
+                        <li><img src="assets/images/sections/payments/logo_VISA.svg" alt="VISA"></li>
+                        <li><img src="assets/images/sections/payments/logo_mastercard.svg" alt="MasterCard"></li>
+                        <li><img src="assets/images/sections/payments/logo_PayPal.svg" alt="PayPal"></li>
+                        <li><img src="assets/images/sections/payments/logo_ROBOKASSA.svg" alt="ROBOKASSA"></li>
+                    </ul>
+                    <section id="payments__fast-methods">
+                        <h3>Одностадийная для быстрых оплат:</h3>
+                        <p>Многие люди с ограниченными возможностями перемещаются онлайн при помощи технологий доступа или клавиатуры.</p>
+                    </section>
+                    <section id="payments__two-stage-payments">
+                        <h3>Двухстадийная оплата:</h3>
+                        <ul id="two-stage-payments__list-of-steps">
+                            <li>Авторизация средств на карте клиента</li>
+                            <li>Подтверждение сделки со стороны владельца</li>
+                            <li>Отложенное списание или разблокировка в случае отказа</li>
+                        </ul>
+                        <section id="payments__advantages">
+                            <h4>Преимущества:</h4>
+                            <ul id="list-of-advantage">
+                                <li>
+                                    <figure class="figure">
+                                        <img src="assets/images/sections/payments/icon_urgency.svg" alt="" class="figure-img">
+                                        <figcaption class="figure-caption">Ускорить процесс оплаты</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="figure">
+                                        <img src="assets/images/sections/payments/icon__without-client.svg" alt="" class="figure-img">
+                                        <figcaption class="figure-caption">Без участия <br class="d-none d-md-block">клиента</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="figure">
+                                        <img src="assets/images/sections/payments/icon__percentages.svg" alt="" class="figure-img">
+                                        <figcaption class="figure-caption">Экономит проценты транзакций</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </section>
+    <section id="_multilanguage" class="section">
+        <div class="container">
+            <h2>Мультиязычность с поддержкой языка аккаунта</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="eternity-block-img">
+                        <div class="eternity-block-img__ua">Вічність_</div>
+                        <div class="eternity-block-img__ru">Вечность_</div>
+                        <div class="eternity-block-img__en">Eternity_</div>
+                    </div>
+
+                    <div class="multilanguage-img">
+                        <img src="assets/images/sections/multilanguage/vput-multilanguage.svg" alt="" class="multilanguage-img__main">
+                        <img src="assets/images/sections/multilanguage/En.svg" alt="" class="multilanguage-img__en">
+                        <img src="assets/images/sections/multilanguage/Ru.svg" alt="" class="multilanguage-img__ru">
+                        <img src="assets/images/sections/multilanguage/Ua.svg" alt="" class="multilanguage-img__ua">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="mb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                    </p>
+                    <div class="multilanguage-block">
+                        <img src="assets/images/sections/multilanguage/first-number.svg" alt="">
+                        <header>
+                            <h3 class="h5">Мультиязычность по домену</h3>
+                            <p>Можно продвигать сайт на разных языках</p>
+                        </header>
+                    </div>
+                    
+                    <div class="multilanguage-block">
+                        <img src="assets/images/sections/multilanguage/second-number.svg" alt="">
+                        <header>
+                            <h3 class="h5">Мультиязычность по сессии</h3>
+                            <p>Можно переключать язык и запоминать выбор внутри любого домена</p>
+                        </header>
+                    </div>
+
+                    <div class="multilanguage-block">
+                        <img src="assets/images/sections/multilanguage/third-number.svg" alt="">
+                        <header>
+                            <h3 class="h5">Мультиязычность с привязкой к аккаунту</h3>
+                            <p>Выбранный язык сохраняется в аккаунте. Позволяет делать оповещения и рассылки на языке пользователя</p>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="_api" class="section">
+        <div class="container">
+            <h2>Работа с API соц. сетей. Отзывы, Профили, Авторизации</h2>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <header>
+                        <h3 class="h5">Мультиязычность по домену</h3>
+                        <p>Можно продвигать сайт на разных языках</p>
+                    </header>
+                    <header>
+                        <h3 class="h5">Мультиязычность по сессии</h3>
+                        <p>Можно переключать язык и запоминать выбор внутри любого домена</p>
+                    </header>
+                    <header>
+                        <h3 class="h5">Мультиязычность с привязкой к аккаунту</h3>
+                        <p>Выбранный язык сохраняется в аккаунте. Позволяет делать оповещения и рассылки на языке пользователя</p>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--<script src="node_modules/fullpage.js/dist/jquery.fullpage.min.js"></script>-->
+<!--<script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>-->
+
+<!-- Custom -->
+<script src="assets/js/common.js"></script>
+<script src="assets/js/sections/statistics.js"></script>
+</body>
+</html>

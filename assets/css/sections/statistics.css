@@ -1,0 +1,66 @@
+#_statistics {
+    background-color: rgba(0,0,0, .5);
+}
+#_statistics h2 {
+    text-transform: uppercase;
+}
+#list-of-stats {
+    text-align: center;
+}
+#list-of-stats picture {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 60px;
+}
+#list-of-stats:hover .figure {
+    opacity: .5;
+}
+#list-of-stats:hover .figure:hover {
+    opacity: 1;
+}
+#list-of-stats .figure {
+    cursor: pointer;
+    transition: .4s;
+}
+#list-of-stats .figure-caption {
+    color: #fff;
+}
+#list-of-stats .stat-count {
+    font-size: 3rem;
+}
+#list-of-stats .stat-name {
+    font-size: 1.13rem;
+    margin-bottom: 15px;
+}
+#list-of-stats .stat-point {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+#statistics__chart-wrapper {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#statistics__chart-wrapper.initialized {
+    opacity: 1;
+}
+
+#statistics__chart-wrapper {
+    height: 280px;
+}
+
+@media (min-width: 1199px) {
+    .fp-viewing-statistics #header {
+        filter: brightness(0) invert(1);
+    }
+}
+
+@media (max-width: 560px) {
+    #_statistics {
+        background-color: #212529;
+    }
+}
