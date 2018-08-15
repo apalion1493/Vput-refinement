@@ -15,6 +15,11 @@
     margin-bottom: 0;
 }
 
+.multilanguage__col-6 {
+    position: relative;
+    bottom: 50px;
+}
+
 .multilanguage-block {
     display: flex;
     align-items: flex-start;
@@ -25,9 +30,32 @@
     margin-right: 20px;
 }
 
+@keyframes word-eternity {
+    0% { transform: translateX(0px)}
+    29% { transform: translateX(0px)}
+    33% { transform: translateX(-150px)}
+    61% { transform: translateX(-150px)}
+    66% { transform: translateX(-300px) }
+    100% { transform: translateX(-300px)}
+
+}
+
 .eternity-block-img {
     display: flex;
+    width: 150px;
+    height: 46px;
+    overflow: hidden;
+    position: relative;
+    left: 150px;
+    margin-bottom: 35px;
+
 }
+
+.eternity-block-img div {
+    animation: word-eternity 12s infinite;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
 
 .eternity-block-img__ru,
 .eternity-block-img__en,
@@ -38,14 +66,72 @@
     border: 1px solid #F0EBEF;
     padding: 5px 20px;
     overflow: hidden;
-    width: 150px;
+    min-width: 150px;
     height: 46px;
     text-align: center;
+    position: relative;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    29% { transform: rotate(0deg);}
+    33% { transform: rotate(120deg);}
+    61% { transform: rotate(120deg);}
+    66% { transform: rotate(240deg); }
+    95% { transform: rotate(240deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes words {
+    0% { transform: rotate(0deg);}
+    29% { transform: rotate(0deg);}
+    33% { transform: rotate(-120deg);}
+    61% { transform: rotate(-120deg);}
+    66% { transform: rotate(-240deg); }
+    95% { transform: rotate(-240deg);}
+    100% { transform: rotate(-360deg);}
 }
 
 .multilanguage-img {
-    margin-top: 27px;
+    width: 450px;
+    height: 450px;
+    position: relative;
+    animation: rotate 12s infinite;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+    transform-origin: 50% 54%;
 }
+
+.multilanguage-img__en,
+.multilanguage-img__ru,
+.multilanguage-img__ua,
+.multilanguage-img__logo {
+    position: absolute;
+    animation: words 12s infinite;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.multilanguage-img__en {
+    bottom: 134px;
+    right: 96px;
+}
+
+.multilanguage-img__ru {
+    bottom: 135px;
+    left: 95px;
+}
+
+.multilanguage-img__ua {
+    top: 91px;
+    left: 211px;
+}
+
+.multilanguage-img__logo {
+    position: absolute;
+    bottom: 185px;
+    left: 172px;
+}
+
+
 
 @media (min-width: 768px) {
     #_multilanguage h2 {
