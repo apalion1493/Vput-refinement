@@ -32,7 +32,7 @@
     background: #E67967;
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 14px;
+    min-width: 14px;
     height: 14px;
     margin-right: 10px;
 }
@@ -41,7 +41,7 @@
     background: #DA726D;
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 14px;
+    min-width: 14px;
     height: 14px;
     margin-right: 10px;
 }
@@ -50,7 +50,7 @@
     background: #CA6877;
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 14px;
+    min-width: 14px;
     height: 14px;
     margin-right: 10px;
 }
@@ -59,7 +59,7 @@
     background: #BA5F80;
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 14px;
+    min-width: 14px;
     height: 14px;
     margin-right: 10px;
 }
@@ -68,7 +68,7 @@
     background: #A4518D;
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 14px;
+    min-width: 14px;
     height: 14px;
     margin-right: 10px;
 }
@@ -78,6 +78,7 @@
     right: 0;
     bottom: 0;;
     z-index: 999;
+    opacity: 0;
 }
 
 .api-phone-screen_secondary img {
@@ -85,6 +86,7 @@
     right: 0;
     bottom: 0;
     z-index: 999;
+    opacity: 0;
 }
 
 .api-phone-screen_front img {
@@ -92,29 +94,72 @@
     z-index: 999;
     right: 0;
     bottom: 0;
+    opacity: 0;
 }
 
 @keyframes phone-screen {
-    0% {transform: translateX(1000px);}
-    100% {transform: translateX(0px);}
+    0% {transform: translateX(1000px); opacity: 1;}
+    100% {transform: translateX(0px); opacity: 1;}
 }
 
 #_api.active .api-phone-screen_posterior img,
 #_api.active .api-phone-screen_secondary img,
 #_api.active .api-phone-screen_front img {
     animation: phone-screen 1.5s;
+    animation-fill-mode: forwards;
 }
 
 #_api.active .api-phone-screen_secondary img {
     animation-delay: 200ms;
+    animation-fill-mode: forwards;
 }
 
 #_api.active .api-phone-screen_front img {
     animation-delay: 400ms;
+    animation-fill-mode: forwards;
 }
 
 @media (min-width: 768px) {
     #_api h2 {
         margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .api-phone-screen_posterior img {
+        position: absolute;
+        right: 0;
+        bottom: 0;;
+        z-index: 999;
+        opacity: 0;
+        width: 55%;
+        height: auto;
+    }
+
+    .api-phone-screen_secondary img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        opacity: 0;
+        width: 43%;
+        height: auto;
+    }
+
+    .api-phone-screen_front img {
+        position: absolute;
+        z-index: 999;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        width: 30%;
+        height: auto;
+    }
+}
+
+@media (max-width: 769px) {
+
+    .api-phone-screen {
+        display: none;
     }
 }

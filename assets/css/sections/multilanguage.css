@@ -138,3 +138,22 @@
         margin-bottom: 100px;
     }
 }
+
+@media (max-width: 769px) {
+
+    .multilanguage-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .eternity-block-img {
+        left: 39%;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .multilanguage__col-6 {
+        display: none;
+    }
+}
