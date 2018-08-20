@@ -120,7 +120,8 @@
             #Apache,
             #centos-line,
             #Centos-logo-light,
-            #rSync {
+            #rSync,
+            #Oval-2 {
                 animation-name: opacityAnimation;
                 animation-duration: calc(var(--animation-delay) * 1s);
                 animation-fill-mode: forwards;
@@ -366,7 +367,8 @@
             animation-delay: calc(var(--animation-delay) * 43s);
         }
 
-        #rSync {
+        #rSync,
+        {
             animation-delay: calc(var(--animation-delay) * 44s);
         }
 
