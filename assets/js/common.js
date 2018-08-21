@@ -10,7 +10,9 @@ jQuery(document).ready(function($) {
             'notifications',
             'affiliate-program',
             'payments',
-            'multilanguage'
+            'multilanguage',
+            'scheme',
+            'api'
         ],
         navigation: false,
         navigationPosition: 'right',
