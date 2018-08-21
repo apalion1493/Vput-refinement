@@ -11,8 +11,8 @@ jQuery(document).ready(function($) {
             'affiliate-program',
             'payments',
             'multilanguage',
-            'scheme',
-            'api'
+            'api',
+            'scheme'
         ],
         navigation: false,
         navigationPosition: 'right',
