@@ -66,6 +66,59 @@
     margin-top: 10px;
 }
 
+#vput,
+#partner,
+#Line3Copy-left,
+#Line2-center,
+#Line2-top,
+#Line2-bottom,
+#referal,
+#Line3Copy-right,
+#partner-text,
+#socials,
+#blogs,
+#websites,
+#parter-links,
+#referals,
+#vput-label,
+#Oval7,
+#Oval7Copy,
+#Line3,
+#Line2Copy,
+#Oval7Copy6,
+#line_4-right,
+#line_4-left,
+#percent,
+#house-container,
+#euro {
+    opacity: 0;
+    position: relative;
+    /*stroke-width: 1;*/
+    /*stroke-dasharray: 400;*/
+    /*stroke-dashoffset: 400;*/
+    /*animation-name: opacityAnimation;*/
+    /*animation-duration: 2s;*/
+    /*animation-fill-mode: forwards;*/
+}
+
+input[type="button"]{
+    -webkit-appearance: button;
+    padding:8px;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+
+/*@keyframes opacityAnimation {*/
+
+    /*from {*/
+        /*opacity: 0;*/
+    /*}*/
+
+    /*to {*/
+        /*opacity: 1;*/
+    /*}*/
+/*}*/
+
 @media (min-width: 1200px)  {
     #_affiliate-program>.container {
         padding-top: 50px;
