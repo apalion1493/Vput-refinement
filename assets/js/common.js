@@ -116,59 +116,86 @@ jQuery(document).ready(function($) {
 });
 
 
-window.onload = function(){
 
-    var playBtn = document.getElementById("playBtn"),
-        pauseBtn = document.getElementById("pauseBtn"),
-        restartBtn = document.getElementById("restartBtn");
 
-    TweenMax.to("#vput", 1, {opacity: 1, delay: 1});
-    TweenMax.to("#vput-label", 1, {opacity: 1, delay: 1});
-    TweenMax.to("#line_4-left", 1, {opacity: 1, delay: 1.5});
-    TweenMax.to("#partner", 1, {opacity: 1, delay: 2});
-    TweenMax.to("#partner-text", 1, {opacity: 1, delay: 2});
-    TweenMax.to("#Line2-top", 1, {opacity: 1, delay: 2.5});
-    TweenMax.to("#parter-links", 1, {opacity: 1, delay: 2.5});
-    TweenMax.to("#websites", 1, {opacity: 1, delay: 3});
-    TweenMax.to("#Oval7", 1, {opacity: 1, delay: 3});
-    TweenMax.to("#Line2-center", 1, {opacity: 1, delay: 3.5});
-    TweenMax.to("#blogs", 1, {opacity: 1, delay: 4});
-    TweenMax.to("#Oval7Copy6", 1, {opacity: 1, delay: 4});
-    TweenMax.to("#Line2-bottom", 1, {opacity: 1, delay: 4.5});
-    TweenMax.to("#socials", 1, {opacity: 1, delay: 5});
-    TweenMax.to("#Oval7Copy", 1, {opacity: 1, delay: 5});
-    TweenMax.to("#Line3", 1, {opacity: 1, delay: 6});
-    TweenMax.to("#Line2Copy", 1, {opacity: 1, delay: 6.5});
-    TweenMax.to("#referal", 1, {opacity: 1, delay: 7});
-    TweenMax.to("#referals", 1, {opacity: 1, delay: 7});
-    TweenMax.to("#line_4-right", 1, {opacity: 1, delay: 7.5});
-    TweenMax.to("#house-container", 0.5, {opacity: 1, delay: 8, x: "283px"});
-    TweenMax.to("#house-container", 0.5, {opacity: 1, delay: 8.5, y: "-145px"});
-    TweenMax.to("#house-container", 0.5, {opacity: 0, delay: 9, y: "-145px"});
-    TweenMax.to("#Line3Copy-left", 1, {opacity: 1, delay: 9});
-    TweenMax.to("#Line3Copy-right", 1, {opacity: 1, delay: 9});
-    TweenMax.fromTo("#euro", 0.5, {opacity: 0, delay: 10, x: "420px", y: "250px"}, {opacity: 1, delay: 10, x: "425px", y: "135px"});
-    TweenMax.to("#euro", 0.5, {opacity: 1, delay: 10.5, x: "80px", y: "135px"});
-    TweenMax.to("#euro", 0.5, {opacity: 0, delay: 11, x: "80px", y: "105px"});
-    TweenMax.fromTo("#euro", 0.5, {opacity: 0, delay: 11, x: "80px", y: "105px"}, {opacity: 0, delay: 11.1, x: "0px", y: "0px"});
-    TweenMax.to("#euro", 0.5, {opacity: 1, delay: 11.5});
-    TweenMax.fromTo("#percent", 0.5, {opacity: 0, delay: 10, x: "-420px", y: "250px"}, {opacity: 1, delay: 10, x: "-425px", y: "135px"});
-    TweenMax.to("#percent", 0.5, {opacity: 1, delay: 10.5, x: "-80px", y: "135px"});
-    TweenMax.to("#percent", 0.5, {opacity: 0, delay: 11, x: "-80px", y: "105px"});
-    TweenMax.fromTo("#percent", 0.5, {opacity: 0, delay: 11, x: "-80px", y: "105px"}, {opacity: 0, delay: 11.1, x: "0px", y: "0px"});
-    TweenMax.to("#percent", 0.5, {opacity: 1, delay: 11.5});
+var restart = document.querySelector("#restart");
+var pauseBtn = document.getElementById("play"),
+    tl = new TimelineMax({paused:true});
 
-    playBtn.onclick = function() {
-        tween.play();
-    };
+tl.to("#vput", 0.8, {opacity: 1}, 'icon1')
+  .to("#vput-label", 0.8, {opacity: 1}, 'icon1')
+  .to("#line_4-left", 1, {opacity: 1})
+  .to("#partner", 0.8, {opacity: 1}, 'icon2')
+  .to("#partner-text", 0.8, {opacity: 1}, 'icon2')
+  .to("#Line2-top", 0.5, {opacity: 1}, 'icon3')
+  .to("#parter-links", 0.8, {opacity: 1}, 'icon3')
+  .to("#websites", 0.8, {opacity: 1}, 'icon4')
+  .to("#Oval7", 0.8, {opacity: 1}, 'icon4')
+  .to("#Line2-center", 0.5, {opacity: 1})
+  .to("#blogs", 0.8, {opacity: 1}, 'icon5')
+  .to("#Oval7Copy6", 0.8, {opacity: 1}, 'icon5')
+  .to("#Line2-bottom", 0.5, {opacity: 1})
+  .to("#socials", 0.8, {opacity: 1}, 'icon6')
+  .to("#Oval7Copy", 0.8, {opacity: 1}, 'icon6')
+  .to("#Line3", 0.8, {opacity: 1})
+  .to("#Line2Copy", 0.8, {opacity: 1})
+  .to("#referal", 0.8, {opacity: 1}, 'icon7')
+  .to("#referals", 0.8, {opacity: 1}, 'icon7')
+  .to("#line_4-right", 0.8, {opacity: 1})
+  .to("#house-container", 0.5, {opacity: 1, x: "283px"})
+  .to("#house-container", 0.5, {opacity: 1, y: "-145px"})
+  .to("#house-container", 0.5, {opacity: 0, y: "-145px"} , 'icon8')
+  .to("#Line3Copy-left", 1, {opacity: 1} , 'icon8')
+  .to("#Line3Copy-right", 1, {opacity: 1} , 'icon8')
+  .fromTo("#euro", 0.5, {opacity: 0,  x: "420px", y: "250px"}, {opacity: 1,  x: "425px", y: "135px"}, 'icon9')
+  .to("#euro", 0.5, {opacity: 1,  x: "80px", y: "135px"}, 'icon10')
+  .to("#euro", 0.5, {opacity: 0,  x: "80px", y: "105px"}, 'icon11')
+  .fromTo("#euro", 0.5, {opacity: 0,  x: "80px", y: "105px"}, {opacity: 0,  x: "0px", y: "0px"} , 'icon12')
+  .to("#euro", 0.5, {opacity: 1}, 'icon13')
+  .fromTo("#percent", 0.5, {opacity: 0,  x: "-420px", y: "250px"}, {opacity: 1,  x: "-425px", y: "135px"}, 'icon9')
+  .to("#percent", 0.5, {opacity: 1,  x: "-80px", y: "135px"}, 'icon10')
+  .to("#percent", 0.5, {opacity: 0,  x: "-80px", y: "105px"}, 'icon11')
+  .fromTo("#percent", 0.5, {opacity: 0,  x: "-80px", y: "105px"}, {opacity: 0,  x: "0px", y: "0px"} , 'icon12')
+  .to("#percent", 0.5, {opacity: 1}, 'icon13')
+  .fromTo(".number-steps__first", 0.5, {opacity: 1}, {opacity: 0}, 3)
 
-    pauseBtn.onclick = function() {
-        tween.pause();
-    };
+  .fromTo(".number-steps__second", 0.5, {opacity: 0}, {opacity: 1}, 3.5)
+  .to(".number-steps__second", 0.5, {opacity: 0}, 7)
+  .fromTo(".number-steps__three", 0.5, {opacity: 0}, {opacity: 1}, 7.5)
+  .to(".number-steps__three", 0.5, {opacity: 0}, 11)
+  .fromTo(".number-steps__four", 0.5, {opacity: 0}, {opacity: 1}, 11.5)
 
-    restartBtn.onclick = function() {
-        tween.restart();
-    };
+  .fromTo(".progress-bar__sheme", 19, {width: "0%"}, {width: "100%"}, 'icon1');
+
+
+tl.call(function() {
+    $('#restart').addClass("active-opacity");
+}, null, null, 15);
+
+tl.call(function() {
+    $('#play').removeClass("active-opacity");
+}, null, null, 15);
+
+pauseBtn.onclick = function() {
+    tl.paused(!tl.paused());
+    pauseBtn.innerHTML = tl.paused() ? "Play" : "Pause";
 };
+
+restart.onclick = function() {
+    tl.restart();
+};
+
+$(function() {
+    $('#restart').click(function() {
+        $(this).siblings("#restart").toggle();
+        $(this).toggleClass('active-opacity');
+    });
+});
+
+$(document).ready(function() {
+    $("#restart").click(function() {
+        $('#play').addClass("active-opacity");
+    });
+});
 
 
