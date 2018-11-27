@@ -115,9 +115,6 @@ jQuery(document).ready(function($) {
     AOS.init();
 });
 
-
-
-
 var restart = document.querySelector("#restart");
 var pauseBtn = document.getElementById("play"),
     tl = new TimelineMax({paused:true});
@@ -166,7 +163,6 @@ tl.to("#vput", 0.8, {opacity: 1}, 'icon1')
   .fromTo(".number-steps__four", 0.5, {opacity: 0}, {opacity: 1}, 11.5)
 
   .fromTo(".progress-bar__sheme", 19, {width: "0%"}, {width: "100%"}, 'icon1');
-
 
 tl.call(function() {
     $('#restart').addClass("active-opacity");

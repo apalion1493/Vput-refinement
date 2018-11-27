@@ -19,7 +19,7 @@
     transition: opacity 1s;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 600px) {
     #_scheme {
         display: none;
     }

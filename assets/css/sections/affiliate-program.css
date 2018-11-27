@@ -11,18 +11,22 @@
     border-radius: 3px;
     min-width: 130px;
 }
+
 #step__counter {
     align-items: center;
 }
+
 .step__counter__number {
     color: #C9C9C9;
     font-size: 3.75rem;
     font-weight: bold;
     padding: 0 1rem;
 }
+
 .step__counter__description {
     text-align: left;
 }
+
 #step__counter {
     max-width: 600px;
     margin: auto;
@@ -30,10 +34,12 @@
     justify-content: flex-end;
     position: relative;
 }
+
 #step__counter>figcaption {
     display: flex;
     align-items: center;
 }
+
 #step__progress .progress {
     position: relative;
     height: 5px;
@@ -41,6 +47,7 @@
     margin: auto;
     overflow: initial;
 }
+
 #step__progress .progress:before,
 #step__progress .progress:after {
     content: "";
@@ -53,16 +60,20 @@
     background-color: #36A8C8;
     border-radius: 50%;
 }
+
 #step__progress .progress:before {
     left: 0;
 }
+
 #step__progress .progress:after {
     right: 0;
 }
+
 #step__progress .progress-bar {
     border-radius: 5px;
     background-image: linear-gradient(to right, #36A8C8, #A24C8C);
 }
+
 #step__progress__title {
     color: #646464;
     margin-top: 10px;
@@ -118,6 +129,24 @@
 .number-steps__three,
 .number-steps__four {
     opacity: 0;
+}
+
+@media (max-width: 600px) {
+    .figure.diagram,
+    .step__btn-container,
+    #step__progress {
+        display: none;
+    }
+
+    .step__counter-block {
+        opacity: 1 !important;
+        position: relative;
+    }
+
+    .step__counter__number {
+        font-size: 50px;
+        padding-left: 0;
+    }
 }
 
 @media (min-width: 1200px)  {
