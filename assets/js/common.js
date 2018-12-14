@@ -7,6 +7,8 @@ jQuery(document).ready(function($) {
             'home',
             'statistics',
             'competitors',
+            'competitors-two',
+            'competitors-three',
             'notifications',
             'affiliate-program',
             'payments',
@@ -75,7 +77,7 @@ jQuery(document).ready(function($) {
 
         //events
         onLeave: function(home, nexthome, direction){
-
+                 googleServices(nexthome, direction);
         },
         afterLoad: function(anchorLink, home){
             $this = $(this);

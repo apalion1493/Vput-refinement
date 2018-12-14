@@ -1,4 +1,6 @@
-#_competitors {
+#_competitors,
+#_competitors-two,
+#_competitors-three{
     background-color: #fff;
 }
 
@@ -159,6 +161,10 @@
     width: 100%;
 }
 
+/*.competitors-height {*/
+    /*height: 1500px;*/
+    /*display: block;*/
+/*}*/
 
 @media (min-width: 768px) {
     #_competitors {
