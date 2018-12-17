@@ -17,10 +17,11 @@
 #_scheme.active svg {
     opacity: 1;
     transition: opacity 1s;
+    z-index: 100;
 }
 
 @media (max-width: 600px) {
-    #_scheme {
+    #_scheme .container {
         display: none;
     }
 }

@@ -1,4 +1,6 @@
-#_notifications {
+#_notifications,
+#_notifications-two,
+#_notifications-three {
     background-color: #F3F3F3;
     position: relative;
 }
@@ -62,7 +64,9 @@
 
 
 @media (min-width: 768px) {
-    #_notifications {
+    #_notifications,
+    #_notifications-two,
+    #_notifications-three {
         background-image: url(../../images/sections/notifications/background.svg);
     }
     #devices {

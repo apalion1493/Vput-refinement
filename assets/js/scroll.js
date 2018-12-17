@@ -1,4 +1,4 @@
-function googleServices(nexthome, direction) {
+function competitorsMain(nexthome, direction) {
     if ( nexthome >= 2 && nexthome <=6 ) {
         if ( nexthome === 3 && direction === 'down' ) {
             $('.competitors__main').animate({ top: '13%' }, 50, function () {
@@ -13,13 +13,15 @@ function googleServices(nexthome, direction) {
             $(".nav-link-three").removeClass('active');
         }
 
-
         if ( nexthome === 2 && direction === 'up' ) {
             $('.competitors__main').animate({top: '150%'}, 50, function () {
                 $(this).removeClass('active');
             });
             $(".nav-link").removeClass('active');
-            $(".nav-link-second").click();
+            setTimeout(function () {
+                $(".nav-link-second").click();
+            }, 500);
+
         }
 
         if ( nexthome === 4 ) {
@@ -41,12 +43,15 @@ function googleServices(nexthome, direction) {
             $(".nav-link-three").click().addClass('active');
 
         }
+
         if ( nexthome === 6 && direction === 'down' ) {
             $('.competitors__main').animate({ top: '-150%' }, 50, function () {
                 $(this).removeClass('active');
             });
             $(".nav-link").removeClass('active');
-            $(".nav-link-second").click();
+            setTimeout(function () {
+                $(".nav-link-second").click();
+            }, 500);
         }
     }
 }

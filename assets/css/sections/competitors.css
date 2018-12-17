@@ -229,7 +229,17 @@
         font-size: 3rem;
     }
 }
+@media (max-width: 1199.98px) {
+    .competitors__main {
+        position: static;
+        opacity: 1;
+        width: 100%;
+    }
 
+    #_competitors {
+        margin-bottom: -60px;
+    }
+}
 @media (max-width: 767px) {
     .competitors__diagram__item>picture {
         padding: 12px 0;
