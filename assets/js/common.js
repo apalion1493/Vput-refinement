@@ -10,8 +10,6 @@ jQuery(document).ready(function($) {
             'competitors-two',
             'competitors-three',
             'notifications',
-            'notifications-two',
-            'notifications-three',
             'affiliate-program',
             'payments',
             'multilanguage',
@@ -78,8 +76,10 @@ jQuery(document).ready(function($) {
         lazyLoading: true,
 
         //events
+
         onLeave: function(home, nexthome, direction){
                  competitorsMain(nexthome, direction);
+                 notificationsScript(nexthome, direction);
         },
         afterLoad: function(anchorLink, home){
             $this = $(this);
@@ -97,8 +97,13 @@ jQuery(document).ready(function($) {
                     $this.find('[href="#competitors__diagram__content"]').click();
                     break;
                 case 'notifications':
-                    console.log(11);
-                    $this.find('[href="#notifications_push"]').click();
+                    $(window).off().on('mousewheel', function(e){
+                        if(e.originalEvent.wheelDelta > 0) {
+                            $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+                        }  else {
+                            $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                        }
+                    });
                     break;
             }
         },
@@ -108,6 +113,17 @@ jQuery(document).ready(function($) {
         afterSlideLoad: function(anchorLink, home, slideAnchor, slidehome){},
         onSlideLeave: function(anchorLink, home, slidehome, direction, nextSlidehome){}
     });
+
+
+    document.getElementById('turnOff').addEventListener('click', function(){
+        $.fn.fullpage.setAllowScrolling(false);
+    });
+
+    document.getElementById('turnOn').addEventListener('click', function(){
+        $.fn.fullpage.setAllowScrolling(true);
+    });
+
+
 
     $('body').removeClass('unvisibility');
 
@@ -121,3 +137,27 @@ jQuery(document).ready(function($) {
     AOS.init();
 });
 
+
+$(document).ready(function(){
+    $('.notification-tab-first').click(function () {
+        $(this).toggleClass('active');
+        $(".notification-tab-second").removeClass('active');
+        $(".notification-tab-three").removeClass('active');
+    });
+});
+
+$(document).ready(function(){
+    $('.notification-tab-second').click(function () {
+        $(this).toggleClass('active');
+        $(".notification-tab-first").removeClass('active');
+        $(".notification-tab-three").removeClass('active');
+    });
+});
+
+$(document).ready(function(){
+    $('.notification-tab-three').click(function () {
+        $(this).toggleClass('active');
+        $(".notification-tab-second").removeClass('active');
+        $(".notification-tab-first").removeClass('active');
+    });
+});

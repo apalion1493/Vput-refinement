@@ -97,6 +97,10 @@ ul.row {
     display: none;
 }
 
+.btn-scroll {
+    display: block;
+}
+
 @media (min-width: 1400px) {
     h2 {
         font-size: 2.25rem;
@@ -109,11 +113,6 @@ ul.row {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-
-    /*#_competitors-two,*/
-    /*#_competitors-three {*/
-        /*display: none;*/
-    /*}*/
 
     .competitors__table {
         display: block;
@@ -130,6 +129,10 @@ ul.row {
     }
     h3, .h3 {
         font-size: 1.5rem;
+    }
+
+    #main {
+        overflow: hidden;
     }
 }
 @media(max-width: 374px) {

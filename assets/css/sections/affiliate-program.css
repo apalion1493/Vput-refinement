@@ -28,8 +28,6 @@
 }
 
 #step__counter {
-    max-width: 600px;
-    margin: auto;
     margin-bottom: 36px;
     justify-content: flex-end;
     position: relative;
@@ -74,9 +72,13 @@
     background-image: linear-gradient(to right, #36A8C8, #A24C8C);
 }
 
-#step__progress__title {
-    color: #646464;
-    margin-top: 10px;
+/*#step__progress__title {*/
+    /*color: #646464;*/
+    /*margin-top: 10px;*/
+/*}*/
+
+.affiliate-program__container {
+    display: flex;
 }
 
 #vput,
@@ -119,9 +121,13 @@
 }
 
 .step__counter-block {
-    position: absolute;
     max-width: 470px;
-    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+#step__counter figure {
+    flex-direction: column;
 }
 
 .number-steps__first,
@@ -129,6 +135,10 @@
 .number-steps__three,
 .number-steps__four {
     opacity: 0;
+}
+
+.step__btn-container {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
@@ -146,6 +156,20 @@
     .step__counter__number {
         font-size: 50px;
         padding-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .affiliate-program__container {
+        flex-direction: column-reverse;
+    }
+
+    #step__counter figure {
+        width: 100%;
+    }
+
+    .step__counter-block {
+        max-width: 100%;
     }
 }
 
@@ -180,8 +204,8 @@
     }
 }
 
-@media (max-width: 376px) {
-    .step__btn-container {
-        padding-top: 150px;
-    }
-}
+/*@media (max-width: 376px) {*/
+    /*.step__btn-container {*/
+        /*padding-top: 150px;*/
+    /*}*/
+/*}*/

@@ -37,12 +37,11 @@ tl.to("#vput", 0.8, {opacity: 1}, 'icon1')
     .to("#percent", 0.5, {opacity: 0,  x: "-80px", y: "105px"}, 'icon11')
     .fromTo("#percent", 0.5, {opacity: 0,  x: "-80px", y: "105px"}, {opacity: 0,  x: "0px", y: "0px"} , 'icon12')
     .to("#percent", 0.5, {opacity: 1}, 'icon13')
-    .fromTo(".number-steps__first", 0.5, {opacity: 1}, {opacity: 0}, 3)
 
+
+    .fromTo(".number-steps__first", 0.5, {opacity: 0}, {opacity: 1}, 1)
     .fromTo(".number-steps__second", 0.5, {opacity: 0}, {opacity: 1}, 3.5)
-    .to(".number-steps__second", 0.5, {opacity: 0}, 7)
     .fromTo(".number-steps__three", 0.5, {opacity: 0}, {opacity: 1}, 7.5)
-    .to(".number-steps__three", 0.5, {opacity: 0}, 11)
     .fromTo(".number-steps__four", 0.5, {opacity: 0}, {opacity: 1}, 11.5)
 
     .fromTo(".progress-bar__sheme", 19, {width: "0%"}, {width: "100%"}, 'icon1');

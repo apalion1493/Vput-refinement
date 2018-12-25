@@ -199,7 +199,7 @@
     }
 
     #_competitors__tabs:before {
-        width: 80%;
+        width: 75%;
     }
 
     .competitors__diagram__item>figcaption {
@@ -222,11 +222,18 @@
     }
 
     #_competitors__tabs {
-        margin-left: 400px;
+        margin-left: auto;
     }
 
     #_competitors h2 {
         font-size: 3rem;
+    }
+}
+@media (min-width: 1500px) {
+    #myTabContent {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media (max-width: 1199.98px) {
@@ -239,6 +246,10 @@
     #_competitors {
         margin-bottom: -60px;
     }
+
+    #_competitors__tabs:before {
+        width: 78%;
+    }
 }
 @media (max-width: 767px) {
     .competitors__diagram__item>picture {
@@ -246,5 +257,11 @@
     }
     .competitors__diagram__item>figcaption {
         padding: 12px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    #_competitors__tabs:before {
+        width: 71%;
     }
 }
