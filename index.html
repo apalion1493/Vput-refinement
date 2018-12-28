@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/sections/multilanguage.css">
     <link rel="stylesheet" href="assets/css/sections/api.css">
     <link rel="stylesheet" href="assets/css/sections/scheme.css">
+    <!--<link rel="stylesheet" href="assets/build/css/bundle.min.css">-->
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
@@ -293,10 +294,10 @@
                     <div class="col-md-6"></div>
                     <div class="col-md-6">
                         <ul id="list-of-notification-types" class="nav nav-tabs" role="tablist">
-                            <li class="nav-item notification-tab-first">
+                            <li class="nav-item notification-tab-first ">
                                 <a class="nav-link" data-toggle="tab" href="#notifications_push" role="tab"></a>
                             </li>
-                            <li class="nav-item notification-tab-second">
+                            <li class="nav-item notification-tab-second active">
                                 <a class="nav-link" data-toggle="tab" href="#notifications_sms" role="tab"></a>
                             </li>
                             <li class="nav-item notification-tab-three">
@@ -304,7 +305,7 @@
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane active" id="notifications_push" role="tabpanel">
+                            <div class="tab-pane fade active" id="notifications_push" role="tabpanel">
                                 <h3>Push notification</h3>
                                 <ul class="list-style-arrow">
                                     <li>Позволяет получать уведомления на всех типах устройств
@@ -316,7 +317,7 @@
                                     <li>Нет необходимости разрабатывать отдельное веб-приложение</li>
                                 </ul>
                             </div>
-                            <div class="tab-pane" id="notifications_sms" role="tabpanel">
+                            <div class="tab-pane fade" id="notifications_sms" role="tabpanel">
                                 <h3>SMS notification</h3>
                                 <ul class="list-style-arrow">
                                     <li>Мультиязычная отправка СМС оповещений в зависимости от языка аккаунта.</li>
@@ -324,7 +325,7 @@
                                     <li>Возможность отпарвлять СМС используя разные сервисы для разных ЗОН получателей. Экономит деньги.</li>
                                 </ul>
                             </div>
-                            <div class="tab-pane" id="notifications_email" role="tabpanel">
+                            <div class="tab-pane fade" id="notifications_email" role="tabpanel">
                                 <h3>E-mail notification</h3>
                                 <ul class="list-style-arrow">
                                     <li>Мультиязычные шаблоны для рассылки по языку аккаунта</li>
@@ -2051,6 +2052,7 @@
 <script type="text/javascript" src="assets/js/greensock-js/src/minified/plugins/CSSPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/sections/scrolloverflow.js"></script>
+<script src="assets/js/sections/scrolloverflow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 
@@ -2059,10 +2061,11 @@
 <script src="assets/js/sections/statistics.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets/js/animation.js"></script>
-<script src="assets/js/notifications.js"></script>
+<!--<script src="assets/js/notifications.js"></script>-->
 
 <script>
     if (screen.width < 1200) document.write ('<script type="text/javascript" src="assets/js/table-company.js" ></sc' + 'ript>');
+    if (screen.width > 1200) document.write ('<script type="text/javascript" src="assets/js/notifications.js" ></sc' + 'ript>');
 </script>
 </body>
 </html>

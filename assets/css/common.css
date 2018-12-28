@@ -98,7 +98,7 @@ ul.row {
 }
 
 .btn-scroll {
-    display: block;
+    display: none;
 }
 
 @media (min-width: 1400px) {
@@ -148,3 +148,29 @@ ul.row {
         font-size: 1.2rem;
     }
 }
+
+#_notifications .tab-pane {
+    opacity: 0 !important;
+}
+
+#_notifications .tab-pane.show {
+    animation: animation-right 0.7s ease-in-out;
+    animation-fill-mode: forwards;
+    -moz-animation-duration: 0.7s;
+    -moz-animation-name: animation-right;
+}
+
+@keyframes animation-right {
+    0% {transform: translateX(200px); opacity: 0;}
+    100%{transform: translateX(0px); opacity: 1;}
+}
+
+@-moz-keyframes animation-right {
+    0% {transform: translateX(200px); opacity: 0;}
+    100%{transform: translateX(0px); opacity: 1;}
+}
+
+/*@keyframes animation-left {*/
+    /*0% {transform: translateX(0px); opacity: 1;}*/
+    /*100%{transform: translateX(-100px); opacity: 0;}*/
+/*}*/

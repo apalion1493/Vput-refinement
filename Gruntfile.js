@@ -15,7 +15,8 @@ module.exports = function (grunt) {
                           "assets/css/sections/affiliate-program.css",
                           "assets/css/sections/payments.css",
                           "assets/css/sections/multilanguage.css",
-                          "assets/css/sections/api.css"
+                          "assets/css/sections/api.css",
+                          "assets/css/sections/scheme.css"
 				      ]
 				}
 			}
@@ -35,7 +36,12 @@ module.exports = function (grunt) {
                     "node_modules/fullpage.js/dist/jquery.fullpage.min.js",
                     "node_modules/chart.js/dist/Chart.bundle.min.js",
                     "assets/js/common.js",
-                    "assets/js/sections/statistics.js"
+                    "assets/js/animation.js",
+                    "assets/js/notifications.js",
+                    "assets/js/scroll.js",
+                    "assets/js/table-company.js",
+                    "assets/js/sections/statistics.js",
+                    "assets/js/sections/scrolloverflow.js"
 		        ]
 		      }
 		    }

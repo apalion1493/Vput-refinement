@@ -341,3 +341,9 @@
         text-align: center;
     }
 }
+
+@media (max-width: 600px) {
+    #step__counter figcaption {
+        margin-bottom: 30px;
+    }
+}

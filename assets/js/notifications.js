@@ -1,23 +1,41 @@
 function notificationsScript(nexthome, direction) {
-    if ( nexthome >= 5 && nexthome <=7 ) {
-        if ( nexthome === 5 ) {
-            $( ".notification-tab-second a" ).click();
-        }
-
-        if ( nexthome === 6 && direction === 'down' ) {
+        if (nexthome === 6) {
             $("#turnOff").click();
-            $( ".notification-tab-first a" ).click();
+            $(window).off().on('mousewheel', function(e){
+
+                if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta > 0))  {
+                    $("#turnOn").click();
+                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta < 0)) {
+                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                    $("#turnOn").click();
+                } else if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta < 0)) {
+                    $("#turnOff").click();
+                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta < 0)) {
+                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta > 0)) {
+                    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta > 0)) {
+                    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+                }
+            });
         }
 
-        if ( nexthome === 6 && direction === 'up' ) {
-            $( ".notification-tab-three a" ).click();
-            $("#turnOff").click();
+        if ((nexthome >= 7) || (nexthome <= 5)) {
+            $(document).ready(function(){
+                $(".notification-tab-first").removeClass('active');
+                $(".notification-tab-second").removeClass('active');
+                $(".notification-tab-three").removeClass('active');
+                $("#_notifications .nav-link").removeClass('active').removeClass('show');
+                $("#_notifications .tab-pane").removeClass('show');
+                $("#_notifications").removeClass('three-tab').removeClass('second-tab').removeClass('first-tab');
+                $("#turnOn").click();
+            });
         }
 
-        if ( nexthome === 7 ) {
-            $( ".notification-tab-second a" ).click();
+        if (nexthome === 7 && direction === 'down') {
+            $("#turnOn").click();
         }
-    }
 }
 
 

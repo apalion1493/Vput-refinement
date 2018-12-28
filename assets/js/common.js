@@ -39,20 +39,28 @@ jQuery(document).ready(function($) {
         continuousHorizontal: false,
         scrollHorizontally: false,
         interlockedSlides: false,
-        dragAndMove: false,
+        dragAndMove: true,
         offsetSections: false,
         resetSliders: false,
         fadingEffect: false,
-        normalScrollElements: '#element1, .element2',
+        normalScrollElements: null,
         scrollOverflow: false,
         scrollOverflowReset: false,
-        scrollOverflowOptions: null,
+        scrollOverflowOptions: {
+            scrollbars: true,
+            mouseWheel: true,
+            hideScrollbars: false,
+            fadeScrollbars: false,
+            disableMouse: true,
+            interactiveScrollbars: true,
+            deceleration: 0.1
+        },
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
         bigSectionsDestination: null,
 
         //Accessibility
-        keyboardScrolling: true,
+        keyboardScrolling: false,
         animateAnchor: true,
         recordHistory: true,
 
@@ -82,7 +90,7 @@ jQuery(document).ready(function($) {
                  notificationsScript(nexthome, direction);
         },
         afterLoad: function(anchorLink, home){
-            $this = $(this);
+            var $this = $(this);
 
             switch(anchorLink) {
                 case 'statistics':
@@ -97,13 +105,7 @@ jQuery(document).ready(function($) {
                     $this.find('[href="#competitors__diagram__content"]').click();
                     break;
                 case 'notifications':
-                    $(window).off().on('mousewheel', function(e){
-                        if(e.originalEvent.wheelDelta > 0) {
-                            $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-                        }  else {
-                            $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                        }
-                    });
+                    $this.find('[href="#notifications_push"]').click();
                     break;
             }
         },
@@ -139,25 +141,32 @@ jQuery(document).ready(function($) {
 
 
 $(document).ready(function(){
-    $('.notification-tab-first').click(function () {
-        $(this).toggleClass('active');
+    $('.notification-tab-first a').click(function () {
+        $(".notification-tab-first").addClass('active');
         $(".notification-tab-second").removeClass('active');
         $(".notification-tab-three").removeClass('active');
+        $("#_notifications").toggleClass('first-tab').removeClass('second-tab').removeClass('three-tab');
     });
 });
 
 $(document).ready(function(){
-    $('.notification-tab-second').click(function () {
-        $(this).toggleClass('active');
+    $('.notification-tab-second a').click(function () {
+        $(".notification-tab-second").addClass('active');
         $(".notification-tab-first").removeClass('active');
         $(".notification-tab-three").removeClass('active');
+        $("#_notifications").toggleClass('second-tab').removeClass('first-tab').removeClass('three-tab');
     });
 });
 
 $(document).ready(function(){
-    $('.notification-tab-three').click(function () {
-        $(this).toggleClass('active');
+    $('.notification-tab-three a').click(function () {
+        $(".notification-tab-three").addClass('active');
         $(".notification-tab-second").removeClass('active');
         $(".notification-tab-first").removeClass('active');
+        $("#_notifications").toggleClass('three-tab').removeClass('second-tab').removeClass('first-tab');
     });
+});
+
+$(document).ready(function(){
+
 });
