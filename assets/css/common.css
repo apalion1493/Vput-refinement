@@ -101,6 +101,20 @@ ul.row {
     display: none;
 }
 
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; height:0px;}
+
+@supports (-ms-ime-align:auto) {
+    .step__counter-block {
+        min-width: 340px;
+    }
+}
+
+@-moz-document url-prefix() {
+    .step__counter-block {
+        min-width: 340px;
+    }
+}
+
 @media (min-width: 1400px) {
     h2 {
         font-size: 2.25rem;
@@ -150,7 +164,7 @@ ul.row {
 }
 
 #_notifications .tab-pane {
-    opacity: 0 !important;
+    opacity: 0;
 }
 
 #_notifications .tab-pane.show {
@@ -169,8 +183,3 @@ ul.row {
     0% {transform: translateX(200px); opacity: 0;}
     100%{transform: translateX(0px); opacity: 1;}
 }
-
-/*@keyframes animation-left {*/
-    /*0% {transform: translateX(0px); opacity: 1;}*/
-    /*100%{transform: translateX(-100px); opacity: 0;}*/
-/*}*/

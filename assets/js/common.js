@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
         bigSectionsDestination: null,
 
         //Accessibility
-        keyboardScrolling: false,
+        keyboardScrolling: true,
         animateAnchor: true,
         recordHistory: true,
 

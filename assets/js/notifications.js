@@ -1,24 +1,62 @@
 function notificationsScript(nexthome, direction) {
         if (nexthome === 6) {
             $("#turnOff").click();
-            $(window).off().on('mousewheel', function(e){
 
-                if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta > 0))  {
+            //Firefox
+            $(window).off().on('wheel', function(e){
+
+                if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.deltaY < 0))  {
                     $("#turnOn").click();
-                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta < 0)) {
+                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.deltaY > 0)) {
                     $('.nav-tabs > .active').next('li').find('a').trigger('click');
                     $("#turnOn").click();
-                } else if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta < 0)) {
+                } else if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.deltaY > 0)) {
                     $("#turnOff").click();
                     $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta < 0)) {
-                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta > 0)) {
-                    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta > 0)) {
+                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.deltaY > 0)) {
+                    window.clearTimeout(Timeout2);
+                    function Timeout2(){
+                        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                    }
+                    setTimeout(Timeout2, 500);
+                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.deltaY < 0)) {
+                    window.clearTimeout(Timeout3);
+                    function Timeout3(){
+                        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+                    }
+                    setTimeout(Timeout3, 500);
+                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.deltaY < 0)) {
                     $('.nav-tabs > .active').prev('li').find('a').trigger('click');
                 }
             });
+
+            //IE, Opera, Safari
+            // $(window).off().on('mousewheel', function(e){
+            //
+            //     if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta > 0))  {
+            //         $("#turnOn").click();
+            //     } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta < 0)) {
+            //         $('.nav-tabs > .active').next('li').find('a').trigger('click');
+            //         $("#turnOn").click();
+            //     } else if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta < 0)) {
+            //         $("#turnOff").click();
+            //         $('.nav-tabs > .active').next('li').find('a').trigger('click');
+            //     } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta < 0)) {
+            //         window.clearTimeout(Timeout2);
+            //         function Timeout2(){
+            //             $('.nav-tabs > .active').next('li').find('a').trigger('click');
+            //         }
+            //         setTimeout(Timeout2, 500);
+            //     } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta > 0)) {
+            //         window.clearTimeout(Timeout3);
+            //         function Timeout3(){
+            //             $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+            //         }
+            //         setTimeout(Timeout3, 500);
+            //     } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta > 0)) {
+            //         $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+            //     }
+            // });
         }
 
         if ((nexthome >= 7) || (nexthome <= 5)) {
@@ -37,54 +75,3 @@ function notificationsScript(nexthome, direction) {
             $("#turnOn").click();
         }
 }
-
-
-
-// document.getElementById('turnOff').addEventListener('click', function(){
-//     fullpage_api.setAllowScrolling(false);
-// });
-//
-//
-// document.getElementById('turnOn').addEventListener('click', function(){
-//     fullpage_api.setAllowScrolling(true);
-// });
-
-
-// if ( direction === 'down') {
-//     alert("asdsfsdfa");
-// } else if (direction === 'up') {
-//     $(".notification-tab-second").click();
-//     document.querySelector('#_notifications').onwheel = e => e.stopPropagation();
-//     alert("1234566");
-// }
-
-
-// var result = document.getElementById('result');
-// var scrollableElement = document.getElementById('scrollableElement');
-// scrollableElement.addEventListener('wheel', findScrollDirectionOtherBrowsers);
-//
-//
-// function findScrollDirectionOtherBrowsers(event){
-//     var delta;
-//     if (event.wheelDelta){
-//         delta = event.wheelDelta;
-//     }else{
-//         delta = -1 *event.deltaY;
-//     }
-//     if (delta < 0){
-//         result.innerHTML = "DOWN";
-//     }else if (delta > 0){
-//         result.innerHTML = "UP";
-//     }
-// }
-
-
-
-// function myFunction() {
-//
-// }
-//
-// myFunction();
-// if ($("#_notifications").hasClass("active")) {
-//     $(".notifications--section").addClass("red");
-// }
