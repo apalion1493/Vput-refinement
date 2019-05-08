@@ -1,9 +1,9 @@
 $('#_competitors>.container').append( $('.competitors__main-container>.competitors__main') );
+$('#_notifications-two>.container').append( $('.notifications-section-container') );
 
-function googleServices(nexthome, direction) {
-    if ( nexthome >= 2 && nexthome <=6 ) {}
-}
-
+// function googleServices(nexthome, direction) {
+//     if ( nexthome >= 2 && nexthome <=6 ) {}
+// }
 
 function notificationsScript(nexthome, direction) {
     if (nexthome === 6) {
@@ -23,5 +23,16 @@ function notificationsScript(nexthome, direction) {
 
     if (nexthome === 7 && direction === 'down') {
         $("#turnOn").click();
+    }
+}
+
+
+function notificationsScript(nexthome, direction) {
+    if ( nexthome >= 5 && nexthome <=9 ) {
+
+        if ( nexthome === 7  ) {
+            $(".notification-tab-first .nav-link").click();
+            $(".notifications-section-container").addClass('first-slide').removeClass('three-slide').removeClass('second-slide');
+        }
     }
 }

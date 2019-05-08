@@ -1,77 +1,49 @@
 function notificationsScript(nexthome, direction) {
-        if (nexthome === 6) {
-            $("#turnOff").click();
-
-            //Firefox
-            $(window).off().on('wheel', function(e){
-
-                if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.deltaY < 0))  {
-                    $("#turnOn").click();
-                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.deltaY > 0)) {
-                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                    $("#turnOn").click();
-                } else if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.deltaY > 0)) {
-                    $("#turnOff").click();
-                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.deltaY > 0)) {
-                    window.clearTimeout(Timeout2);
-                    function Timeout2(){
-                        $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                    }
-                    setTimeout(Timeout2, 500);
-                } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.deltaY < 0)) {
-                    window.clearTimeout(Timeout3);
-                    function Timeout3(){
-                        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-                    }
-                    setTimeout(Timeout3, 500);
-                } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.deltaY < 0)) {
-                    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-                }
-            });
-
-            //IE, Opera, Safari
-            // $(window).off().on('mousewheel', function(e){
-            //
-            //     if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta > 0))  {
-            //         $("#turnOn").click();
-            //     } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta < 0)) {
-            //         $('.nav-tabs > .active').next('li').find('a').trigger('click');
-            //         $("#turnOn").click();
-            //     } else if (($("#_notifications").hasClass("first-tab")) && (e.originalEvent.wheelDelta < 0)) {
-            //         $("#turnOff").click();
-            //         $('.nav-tabs > .active').next('li').find('a').trigger('click');
-            //     } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta < 0)) {
-            //         window.clearTimeout(Timeout2);
-            //         function Timeout2(){
-            //             $('.nav-tabs > .active').next('li').find('a').trigger('click');
-            //         }
-            //         setTimeout(Timeout2, 500);
-            //     } else if(($("#_notifications").hasClass("second-tab")) && (e.originalEvent.wheelDelta > 0)) {
-            //         window.clearTimeout(Timeout3);
-            //         function Timeout3(){
-            //             $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-            //         }
-            //         setTimeout(Timeout3, 500);
-            //     } else if(($("#_notifications").hasClass("three-tab")) && (e.originalEvent.wheelDelta > 0)) {
-            //         $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-            //     }
-            // });
-        }
-
-        if ((nexthome >= 7) || (nexthome <= 5)) {
-            $(document).ready(function(){
-                $(".notification-tab-first").removeClass('active');
-                $(".notification-tab-second").removeClass('active');
-                $(".notification-tab-three").removeClass('active');
-                $("#_notifications .nav-link").removeClass('active').removeClass('show');
-                $("#_notifications .tab-pane").removeClass('show');
-                $("#_notifications").removeClass('three-tab').removeClass('second-tab').removeClass('first-tab');
-                $("#turnOn").click();
+    if ( nexthome >= 5 && nexthome <=9 ) {
+        if ( nexthome === 6 && direction === 'down' ) {
+            $('.notifications-section').addClass('active').animate({ top: '10%' }, 50, function () {
+                $(this).addClass('active');
             });
         }
 
-        if (nexthome === 7 && direction === 'down') {
-            $("#turnOn").click();
+        if ( nexthome === 6  ) {
+            $(".notification-tab-first .nav-link").click();
+            $(".notifications-section-container").addClass('first-slide').removeClass('three-slide').removeClass('second-slide');
         }
+
+        if ( nexthome === 5 && direction === 'up' ) {
+            $('.notifications-section').animate({top: '150%'}, 50, function () {
+                $(this).removeClass('active');
+            });
+            $(".notifications-section-container").removeClass('three-slide').removeClass('second-slide').removeClass('first-slide');
+
+        }
+
+        if ( nexthome === 7 ) {
+            $(".notification-tab-second .nav-link").click();
+            $(".notifications-section-container").addClass('second-slide').removeClass('three-slide').removeClass('first-slide');
+        }
+
+        if ( nexthome === 8 ) {
+            $(".notification-tab-three .nav-link").click();
+            $(".notifications-section-container").addClass('three-slide').removeClass('second-slide').removeClass('first-slide');
+        }
+
+        if ( nexthome === 8 && direction === 'up' ) {
+            $('.notifications-section').animate({ top: '13%' }, 50, function () {
+                $(this).addClass('active');
+            });
+        }
+
+        if ( nexthome === 9 && direction === 'down' ) {
+            $('.notifications-section').animate({ top: '-150%' }, 50, function () {
+                $(this).removeClass('active');
+            });
+            $(".notifications-section-container").removeClass('three-slide').removeClass('second-slide').removeClass('first-slide');
+            $(".nav-link").removeClass('active');
+            setTimeout(function () {
+                $(".nav-link-second").click();
+            }, 500);
+        }
+    }
 }

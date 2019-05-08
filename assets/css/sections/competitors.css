@@ -149,7 +149,7 @@
 
 .progress-bar {
     width: 0;
-    transition: all .7s ease;
+    transition: width .7s ease;
 }
 
 .progress-bar__sheme {
@@ -160,11 +160,6 @@
 .tab-pane.show .progress-bar {
     width: 100%;
 }
-
-/*.competitors-height {*/
-    /*height: 1500px;*/
-    /*display: block;*/
-/*}*/
 
 @media (min-width: 768px) {
     #_competitors {

@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/sections/multilanguage.css">
     <link rel="stylesheet" href="assets/css/sections/api.css">
     <link rel="stylesheet" href="assets/css/sections/scheme.css">
+    <link rel="stylesheet" href="assets/css/sections/other-jobs.css">
+    <link rel="stylesheet" href="assets/css/sections/write-ToUs.css">
     <!--<link rel="stylesheet" href="assets/build/css/bundle.min.css">-->
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
@@ -187,7 +189,81 @@
     </div>
 </div>
 
-
+<div class="notifications-section-container">
+    <div class="notifications-section">
+        <div id="devices">
+            <figure id="MacBook">
+                <div id="MacBook__screen">
+                    <div id="MacBook__screen__index-page">
+                        <img id="MacBook__notification" src="assets/images/sections/notifications/MacBook__notification.svg" alt="">
+                    </div>
+                    <div id="MacBook__screen__email-page"></div>
+                </div>
+            </figure>
+            <figure id="iPhone-X">
+                <div id="iPhone-X__screen">
+                    <img id="iPhone-X__notification" src="assets/images/sections/notifications/iPhone_X__notification.svg">
+                    <div id="iPhone-X__app_Safari"></div>
+                    <div id="iPhone-X__app_iMessage">
+                        <div class="message-box">
+                            <img src="assets/images/sections/notifications/iPhone_X_app_iMssage__message-2.svg" alt="">
+                            <img src="assets/images/sections/notifications/iPhone_X_app_iMssage__message-1.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="container">
+            <h2>Notification Center</h2>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <ul id="list-of-notification-types" class="nav nav-tabs" role="tablist">
+                        <li class="nav-item notification-tab-first">
+                            <a class="nav-link" data-toggle="tab" href="#notifications_push" role="tab"></a>
+                        </li>
+                        <li class="nav-item notification-tab-second active">
+                            <a class="nav-link" data-toggle="tab" href="#notifications_sms" role="tab"></a>
+                        </li>
+                        <li class="nav-item notification-tab-three">
+                            <a class="nav-link" data-toggle="tab" href="#notifications_email" role="tab"></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active" id="notifications_push" role="tabpanel">
+                            <h3>Push notification</h3>
+                            <ul class="list-style-arrow">
+                                <li>Позволяет получать уведомления на всех типах устройств
+                                    <i data-icon="apple"></i>
+                                    <i data-icon="windows"></i>
+                                    <i data-icon="android"></i>
+                                </li>
+                                <li>Позволяет снизить время реакции на события в системе</li>
+                                <li>Нет необходимости разрабатывать отдельное веб-приложение</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="notifications_sms" role="tabpanel">
+                            <h3>SMS notification</h3>
+                            <ul class="list-style-arrow">
+                                <li>Мультиязычная отправка СМС оповещений в зависимости от языка аккаунта.</li>
+                                <li>Возможностью подключать различные движка для отправки СМС.</li>
+                                <li>Возможность отпарвлять СМС используя разные сервисы для разных ЗОН получателей. Экономит деньги.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="notifications_email" role="tabpanel">
+                            <h3>E-mail notification</h3>
+                            <ul class="list-style-arrow">
+                                <li>Мультиязычные шаблоны для рассылки по языку аккаунта</li>
+                                <li>HTML вёрстка шаблонов</li>
+                                <li>Адаптированные шаблоны под устройства</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <main id="main" class="js-fullpage">
     <section id="_home" class="section">
@@ -255,8 +331,7 @@
         </div>
     </section>
     <section id="_competitors" class="section">
-        <div class="container">
-        </div>
+        <div class="container"></div>
     </section>
     <section id="_competitors-two" class="section">
         <div class="container"></div>
@@ -265,79 +340,13 @@
         <div class="container"></div>
     </section>
     <section id="_notifications" class="section">
-        <div class="notifications-section">
-            <div id="devices">
-                <figure id="MacBook">
-                    <div id="MacBook__screen">
-                        <div id="MacBook__screen__index-page">
-                            <img id="MacBook__notification" src="assets/images/sections/notifications/MacBook__notification.svg" alt="">
-                        </div>
-                        <div id="MacBook__screen__email-page"></div>
-                    </div>
-                </figure>
-                <figure id="iPhone-X">
-                    <div id="iPhone-X__screen">
-                        <img id="iPhone-X__notification" src="assets/images/sections/notifications/iPhone_X__notification.svg">
-                        <div id="iPhone-X__app_Safari"></div>
-                        <div id="iPhone-X__app_iMessage">
-                            <div class="message-box">
-                                <img src="assets/images/sections/notifications/iPhone_X_app_iMssage__message-2.svg" alt="">
-                                <img src="assets/images/sections/notifications/iPhone_X_app_iMssage__message-1.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </figure>
-            </div>
-            <div class="container">
-                <h2>Notification Center</h2>
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6">
-                        <ul id="list-of-notification-types" class="nav nav-tabs" role="tablist">
-                            <li class="nav-item notification-tab-first ">
-                                <a class="nav-link" data-toggle="tab" href="#notifications_push" role="tab"></a>
-                            </li>
-                            <li class="nav-item notification-tab-second active">
-                                <a class="nav-link" data-toggle="tab" href="#notifications_sms" role="tab"></a>
-                            </li>
-                            <li class="nav-item notification-tab-three">
-                                <a class="nav-link" data-toggle="tab" href="#notifications_email" role="tab"></a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active" id="notifications_push" role="tabpanel">
-                                <h3>Push notification</h3>
-                                <ul class="list-style-arrow">
-                                    <li>Позволяет получать уведомления на всех типах устройств
-                                        <i data-icon="apple"></i>
-                                        <i data-icon="windows"></i>
-                                        <i data-icon="android"></i>
-                                    </li>
-                                    <li>Позволяет снизить время реакции на события в системе</li>
-                                    <li>Нет необходимости разрабатывать отдельное веб-приложение</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="notifications_sms" role="tabpanel">
-                                <h3>SMS notification</h3>
-                                <ul class="list-style-arrow">
-                                    <li>Мультиязычная отправка СМС оповещений в зависимости от языка аккаунта.</li>
-                                    <li>Возможностью подключать различные движка для отправки СМС.</li>
-                                    <li>Возможность отпарвлять СМС используя разные сервисы для разных ЗОН получателей. Экономит деньги.</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="notifications_email" role="tabpanel">
-                                <h3>E-mail notification</h3>
-                                <ul class="list-style-arrow">
-                                    <li>Мультиязычные шаблоны для рассылки по языку аккаунта</li>
-                                    <li>HTML вёрстка шаблонов</li>
-                                    <li>Адаптированные шаблоны под устройства</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="container"></div>
+    </section>
+    <section id="_notifications-two" class="section">
+        <div class="container"></div>
+    </section>
+    <section id="_notifications-three" class="section">
+        <div class="container"></div>
     </section>
     <section id="_affiliate-program" class="section">
         <div class="container text-center">
@@ -2046,6 +2055,129 @@
             </div>
         </div>
     </section>
+    <section id="_other-jobs" class="section">
+        <div class="container d-flex flex-column align-items-center">
+            <h2 class="text-center">Наши другие работы</h2>
+            <div class="row other-jobs__row">
+                <div class="col-sm-12 col-md-6 other-jobs__padding">
+                    <div class="other-jobs__container other-jobs__container-vput">
+                        <div class="other-jobs__container-img other-jobs__container-vput-img">
+                            <a class="d-flex justify-content-center" data-tilt href="#">
+                                <img src="assets/images/sections/other-jobs/vput-main-img.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="other-jobs__container-text">
+                            <span>V.P.U.T.</span>
+                            <p>While you progress through the questions on our personalised price calculator, we keep updating the price for your booking. At the end of the process we give you a fixed price for your relocation. While you progress through the questions on our personalised price calculator, we keep updating the price.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 other-jobs__padding">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 other-jobs__padding">
+                            <div class="other-jobs__container other-jobs__container-stooler">
+                                <div class="other-jobs__container-img other-jobs__container-stooler-img">
+                                    <a class="w-100" href="#">
+                                        <img src="assets/images/sections/other-jobs/stooler-main-img.png" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="other-jobs__container-text">
+                                    <span>Stooller</span>
+                                    <p>While you progress through the questions on our personalised price calculator, we keep updating the price for your booking. At the end of the process we give you a fixed price for your relocation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 other-jobs__padding">
+                            <div class="other-jobs__container other-jobs__container-ansy">
+                                <div class="other-jobs__container-img other-jobs__container-ansy-img">
+                                    <!--<div  style="position: relative; width: 100%; height: 100%;">-->
+                                    <!--<img data-tilt class="other-jobs__container-ansy-img-first"  src="assets/images/sections/other-jobs/ansy-img__first.png" alt="">-->
+                                    <!--<img data-tilt class="other-jobs__container-ansy-img-second"  src="assets/images/sections/other-jobs/ansy-img__second.png" alt="">-->
+                                    <!--</div>-->
+                                    <a class="w-100 d-flex justify-content-center" data-tilt href="#">
+                                        <img src="assets/images/sections/other-jobs/ansy-main-img.png" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="other-jobs__container-text">
+                                    <span>Ansy Gallery</span>
+                                    <p>Ansy Carpet Company – крупнейший магазин элитных ковров в Москве, созданный в 1992 году искусствоведами антикварного бутика и декораторами столичной дизайн-студии.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="_write-ToUs" class="section flex-column align-items-center">
+        <div class="container d-flex flex-column align-items-center">
+            <h2 class="text-center">Хотите подобный проект?</h2>
+            <div class="row write-ToUs__row">
+                <div class="col-sm-12 mb-5 mb-md-0 col-md-6">
+                    <div class="write-ToUs__block-contact">
+                        <span class="write-ToUs__title">Контакты для связи</span>
+                        <ul class="write-ToUs__list">
+                            <li>
+                                <span>Phone:</span> <p class="write-ToUs__list-text">+373 (69) 377 248 &emsp;Moldova</p>
+                            </li>
+
+                            <li>
+                                <span>Email:</span> <p class="write-ToUs__list-text">a.popov@webdelo.org</p>
+                            </li>
+
+                            <li>
+                                <span>Skype:</span> <p class="write-ToUs__list-text">webdelo.org</p>
+                            </li>
+
+                            <li>
+                                <span>Address:</span> <p class="write-ToUs__list-text">Moldova, Bender, 28 Suvorov st. Business Center "Sheriff", office 38</p>
+                            </li>
+                        </ul>
+
+                        <span class="write-ToUs__title justify-content-start">Следите за нами</span>
+                        <div class="write-ToUs__block-social">
+                            <a href="#" class="write-ToUs__block-social-icon write-ToUs__block-social-linkedin"></a>
+                            <a href="#" class="write-ToUs__block-social-icon write-ToUs__block-social-github"></a>
+                            <a href="#" class="write-ToUs__block-social-icon write-ToUs__block-social-facebook"></a>
+                            <a href="#" class="write-ToUs__block-social-icon write-ToUs__block-social-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 mb-5 mb-md-0 col-md-6">
+                    <div class="write-ToUs__block-form">
+                        <span class="write-ToUs__title">Напишите прямо сейчас</span>
+                        <p class="d-flex justify-content-center justify-content-md-start">И мы найдем для вас лучшее решение</p>
+                        <form class="write-ToUs__form" action="">
+                            <input class="write-ToUs__form-control write-ToUs__form-control-name" type="text" placeholder="Ваше имя">
+                            <input class="write-ToUs__form-control write-ToUs__form-control-phone" type="text" placeholder="Ваш телефон">
+                            <textarea class="write-ToUs__form-control write-ToUs__form-control-comment" rows="1" placeholder="Текст сообщения"></textarea>
+
+                            <button type="submit" class="btn yellow-btn-form write-ToUs__block-form-btn">ОТПРАВИТЬ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn blue-btn-form">ЗАПОЛНИТЬ БРИФ</button>
+        <svg class="editorial"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 24 150 28"
+             preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(0, 0, 0, 0)" stroke-width="0.1" stroke="#3E4D75"/>
+                <use xlink:href="#gentle-wave" x="50" y="2" fill="rgba(0, 0, 0, 0)"  stroke-width="0.1" stroke="#405E52"/>
+                <use xlink:href="#gentle-wave" x="50" y="4" fill="rgba(0, 0, 0, 0)"  stroke-width="0.1" stroke="#735C7F"/>
+            </g>
+        </svg>
+    </section>
 </main>
 
 <!-- Libraries -->
@@ -2065,7 +2197,8 @@
 <script src="assets/js/sections/statistics.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets/js/animation.js"></script>
-<!--<script src="assets/js/notifications.js"></script>-->
+
+<script src="assets/js/tilt.js/src/tilt.jquery.js" ></script>
 
 <script>
     if (screen.width < 1200) document.write ('<script type="text/javascript" src="assets/js/table-company.js" ></sc' + 'ript>');

@@ -131,6 +131,16 @@ ul.row {
     .competitors__table {
         display: block;
     }
+
+    #_notifications,
+    #_notifications-three,
+    #_competitors-three {
+        padding: 0;
+    }
+
+    .notifications-section-container {
+        height: 700px;
+    }
 }
 @media (max-width: 768px) {
     h1, .h1 {
@@ -182,4 +192,18 @@ ul.row {
 @-moz-keyframes animation-right {
     0% {transform: translateX(200px); opacity: 0;}
     100%{transform: translateX(0px); opacity: 1;}
+}
+
+.notifications-section {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: 700ms;
+    width: 100%;
+    height: 90%;
+}
+
+.notifications-section.active {
+    opacity: 1;
+    z-index: 1;
 }
